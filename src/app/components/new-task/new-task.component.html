@@ -1,0 +1,16 @@
+<div class="mb-3">
+<label for="" class="form-label">Užduoties pavadinimas:</label> <br>
+<input type="text" class="form-contol" [(ngModel)]="task">
+</div>
+
+<div class="mb-3">
+    <select name="priority" id="priority" class="form-contol" [(ngModel)]="priority">
+    <option value="">Pasirinkite prioritetą:</option>
+    <option value="labai_neskubu">Neskubu</option>
+    <option value="neskubu">Jau būtų gera, jei pradedum mąstyti apie tai</option>
+    <option value="skubu">Jau būtų gera, jei pradedum daryti tai</option>
+    <option value="labai_skubu">Labai skubu</option>
+</select>
+</div>
+
+<button class="btn btn-success" (click)="addTask()">Pridėti užduotį</button>

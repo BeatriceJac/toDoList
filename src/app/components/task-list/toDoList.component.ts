@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoList  } from 'src/app/models/toDoList';
+import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
   selector: 'app-toDoList',
@@ -9,16 +10,10 @@ import { TodoList  } from 'src/app/models/toDoList';
 export class toDoListComponent implements OnInit {
   public tasksList:TodoList[]=[];
 
-  constructor() { 
-    this.tasksList.push(new TodoList("Clen Kitchen", "mid"));
-    this.tasksList.push(new TodoList("Vacuum", "mid"));
-    this.tasksList.push(new TodoList("Ride a horse", "mid"));
-    this.tasksList.push(new TodoList("Feed cat", "mid"));
+  constructor(private tasksService:TasksService) { 
   }
 
   ngOnInit(): void {
+    this.tasksList=this.tasksService.tasksList
   }
-
 }
-
-console.log ("kahjbfs")
