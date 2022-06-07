@@ -6,11 +6,11 @@
 <div class="mb-3">
     <select name="priority" id="priority" class="form-contol" [(ngModel)]="priority">
     <option value="">Pasirinkite prioritetą:</option>
-    <option value="labai_neskubu">Neskubu</option>
-    <option value="neskubu">Jau būtų gera, jei pradedum mąstyti apie tai</option>
-    <option value="skubu">Jau būtų gera, jei pradedum daryti tai</option>
-    <option value="labai_skubu">Labai skubu</option>
+    <option value="Neskubu">Neskubu</option>
+    <option value="Jau būtų gera, jei pradedum mąstyti apie tai">Jau būtų gera, jei pradedum mąstyti apie tai</option>
+    <option value="Jau būtų gera, jei pradedum daryti tai">Jau būtų gera, jei pradedum daryti tai</option>
+    <option value="Labai skubu">Labai skubu</option>
 </select>
 </div>
 
-<button class="btn btn-success" (click)="addTask()">Pridėti užduotį</button>
+<button class="btn btn-info" (click)="addTask()">Pridėti užduotį</button>
